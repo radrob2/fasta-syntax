@@ -1,0 +1,34 @@
+{
+  "name": "fasta-syntax",
+  "displayName": "FASTA Sequence Highlighter",
+  "description": "Syntax highlighting for FASTA sequence files with per-nucleotide coloring",
+  "version": "0.2.0",
+  "publisher": "roberthadfield",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "configurationDefaults": {
+      "[fasta]": {
+        "editor.wordWrap": "off",
+        "editor.minimap.enabled": false
+      }
+    },
+    "languages": [
+      {
+        "id": "fasta",
+        "aliases": ["FASTA", "fasta"],
+        "extensions": [".fasta", ".fas", ".fa", ".fna", ".ffn", ".faa", ".frn"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fasta",
+        "scopeName": "source.fasta",
+        "path": "./syntaxes/fasta.tmLanguage.json"
+      }
+    ]
+  }
+}

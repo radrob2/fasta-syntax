@@ -1,0 +1,5 @@
+test/
+palettes.html
+generate_palette.R
+*.vsix
+.gitignore

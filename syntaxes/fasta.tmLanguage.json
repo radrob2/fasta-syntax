@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "FASTA",
+  "scopeName": "source.fasta",
+  "patterns": [
+    { "include": "#header" },
+    { "include": "#comment" },
+    { "include": "#sequence" }
+  ],
+  "repository": {
+    "header": {
+      "match": "^(>)(.*)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.header.fasta" },
+        "2": { "name": "entity.name.sequence.fasta" }
+      }
+    },
+    "comment": {
+      "match": "^;.*$",
+      "name": "comment.line.semicolon.fasta"
+    },
+    "sequence": {
+      "patterns": [
+        { "include": "#adenine" },
+        { "include": "#cytosine" },
+        { "include": "#guanine" },
+        { "include": "#thymine" },
+        { "include": "#uracil" },
+        { "include": "#ambiguous" },
+        { "include": "#gap" }
+      ]
+    },
+    "adenine": {
+      "match": "[Aa]",
+      "name": "nucleotide.adenine.fasta"
+    },
+    "cytosine": {
+      "match": "[Cc]",
+      "name": "nucleotide.cytosine.fasta"
+    },
+    "guanine": {
+      "match": "[Gg]",
+      "name": "nucleotide.guanine.fasta"
+    },
+    "thymine": {
+      "match": "[Tt]",
+      "name": "nucleotide.thymine.fasta"
+    },
+    "uracil": {
+      "match": "[Uu]",
+      "name": "nucleotide.uracil.fasta"
+    },
+    "ambiguous": {
+      "match": "[NnRrYyKkMmSsWwBbDdHhVv]",
+      "name": "nucleotide.ambiguous.fasta"
+    },
+    "gap": {
+      "match": "[-\\.]",
+      "name": "punctuation.gap.fasta"
+    }
+  }
+}

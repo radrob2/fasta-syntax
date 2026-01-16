@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FASTA Syntax Color Palettes</title>
+  <style>
+    body {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      font-family: 'Consolas', 'Monaco', monospace;
+      padding: 40px;
+      font-size: 16px;
+    }
+    h1 {
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    .palette {
+      margin-bottom: 40px;
+    }
+    .palette-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .palette-desc {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+    .sequence {
+      font-size: 20px;
+      letter-spacing: 2px;
+      line-height: 1.8;
+    }
+    .header {
+      color: #d4d4d4;
+      font-weight: bold;
+    }
+    .header-symbol {
+      color: #808080;
+      font-weight: bold;
+    }
+    .gap {
+      color: #808080;
+    }
+    .swatches {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .swatch-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+    }
+    .swatch-label {
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>FASTA Syntax Color Palettes</h1>
+
+  <div class="palette">
+    <div class="palette-name">Vivid</div>
+    <div class="palette-desc">Polychrome-optimized, max distinguishability (min distance 243)</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#FB16FE">A</span><span style="color:#00D2FB">C</span><span style="color:#FE8A0D">G</span><span style="color:#22F50D">T</span><span style="color:#FB16FE">A</span><span style="color:#FB16FE">A</span><span style="color:#FE8A0D">G</span><span style="color:#00D2FB">C</span><span style="color:#22F50D">T</span><span style="color:#22F50D">T</span><span style="color:#FB16FE">A</span><span style="color:#00D2FB">C</span><span class="gap">--</span><span style="color:#FE8A0D">G</span><span style="color:#22F50D">T</span><span style="color:#FB16FE">A</span><span style="color:#00D2FB">C</span><span style="color:#FE8A0D">G</span><span style="color:#22F50D">T</span><span style="color:#FB16FE">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#FB16FE"></div><span class="swatch-label">A #FB16FE</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#00D2FB"></div><span class="swatch-label">C #00D2FB</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FE8A0D"></div><span class="swatch-label">G #FE8A0D</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#22F50D"></div><span class="swatch-label">T/U #22F50D</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Classic</div>
+    <div class="palette-desc">Red A, blue C, yellow G, green T</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#FF4444">A</span><span style="color:#4488FF">C</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4444">A</span><span style="color:#FF4444">A</span><span style="color:#FFDD44">G</span><span style="color:#4488FF">C</span><span style="color:#44DD44">T</span><span style="color:#44DD44">T</span><span style="color:#FF4444">A</span><span style="color:#4488FF">C</span><span class="gap">--</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4444">A</span><span style="color:#4488FF">C</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4444">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#FF4444"></div><span class="swatch-label">A #FF4444</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#4488FF"></div><span class="swatch-label">C #4488FF</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFDD44"></div><span class="swatch-label">G #FFDD44</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#44DD44"></div><span class="swatch-label">T/U #44DD44</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Soft (Default)</div>
+    <div class="palette-desc">Pink A, sky blue C, yellow G, green T</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#FF4466">A</span><span style="color:#44AAFF">C</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4466">A</span><span style="color:#FF4466">A</span><span style="color:#FFDD44">G</span><span style="color:#44AAFF">C</span><span style="color:#44DD44">T</span><span style="color:#44DD44">T</span><span style="color:#FF4466">A</span><span style="color:#44AAFF">C</span><span class="gap">--</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4466">A</span><span style="color:#44AAFF">C</span><span style="color:#FFDD44">G</span><span style="color:#44DD44">T</span><span style="color:#FF4466">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#FF4466"></div><span class="swatch-label">A #FF4466</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#44AAFF"></div><span class="swatch-label">C #44AAFF</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFDD44"></div><span class="swatch-label">G #FFDD44</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#44DD44"></div><span class="swatch-label">T/U #44DD44</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Muted</div>
+    <div class="palette-desc">Soft colors for extended viewing</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#D47070">A</span><span style="color:#7088B8">C</span><span style="color:#C4A040">G</span><span style="color:#70A870">T</span><span style="color:#D47070">A</span><span style="color:#D47070">A</span><span style="color:#C4A040">G</span><span style="color:#7088B8">C</span><span style="color:#70A870">T</span><span style="color:#70A870">T</span><span style="color:#D47070">A</span><span style="color:#7088B8">C</span><span class="gap">--</span><span style="color:#C4A040">G</span><span style="color:#70A870">T</span><span style="color:#D47070">A</span><span style="color:#7088B8">C</span><span style="color:#C4A040">G</span><span style="color:#70A870">T</span><span style="color:#D47070">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#D47070"></div><span class="swatch-label">A #D47070</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#7088B8"></div><span class="swatch-label">C #7088B8</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#C4A040"></div><span class="swatch-label">G #C4A040</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#70A870"></div><span class="swatch-label">T/U #70A870</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Primary</div>
+    <div class="palette-desc">Pure red, blue, yellow, green</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#FF0000">A</span><span style="color:#0000FF">C</span><span style="color:#FFFF00">G</span><span style="color:#00FF00">T</span><span style="color:#FF0000">A</span><span style="color:#FF0000">A</span><span style="color:#FFFF00">G</span><span style="color:#0000FF">C</span><span style="color:#00FF00">T</span><span style="color:#00FF00">T</span><span style="color:#FF0000">A</span><span style="color:#0000FF">C</span><span class="gap">--</span><span style="color:#FFFF00">G</span><span style="color:#00FF00">T</span><span style="color:#FF0000">A</span><span style="color:#0000FF">C</span><span style="color:#FFFF00">G</span><span style="color:#00FF00">T</span><span style="color:#FF0000">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#FF0000"></div><span class="swatch-label">A #FF0000</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0000FF"></div><span class="swatch-label">C #0000FF</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFFF00"></div><span class="swatch-label">G #FFFF00</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#00FF00"></div><span class="swatch-label">T/U #00FF00</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Accessible</div>
+    <div class="palette-desc">Colorblind-friendly (no green - uses orange for T)</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#DC267F">A</span><span style="color:#648FFF">C</span><span style="color:#FFB000">G</span><span style="color:#FE6100">T</span><span style="color:#DC267F">A</span><span style="color:#DC267F">A</span><span style="color:#FFB000">G</span><span style="color:#648FFF">C</span><span style="color:#FE6100">T</span><span style="color:#FE6100">T</span><span style="color:#DC267F">A</span><span style="color:#648FFF">C</span><span class="gap">--</span><span style="color:#FFB000">G</span><span style="color:#FE6100">T</span><span style="color:#DC267F">A</span><span style="color:#648FFF">C</span><span style="color:#FFB000">G</span><span style="color:#FE6100">T</span><span style="color:#DC267F">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#DC267F"></div><span class="swatch-label">A #DC267F</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#648FFF"></div><span class="swatch-label">C #648FFF</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FFB000"></div><span class="swatch-label">G #FFB000</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#FE6100"></div><span class="swatch-label">T/U #FE6100</span></div>
+    </div>
+  </div>
+
+  <div class="palette">
+    <div class="palette-name">Balanced</div>
+    <div class="palette-desc">Polychrome L50-85, red A, cyan C, yellow G, green T</div>
+    <div class="sequence">
+      <span class="header-symbol">&gt;</span><span class="header">Sequence_Example</span><br>
+      <span style="color:#F60D16">A</span><span style="color:#0DEAEB">C</span><span style="color:#DADB1C">G</span><span style="color:#00EF00">T</span><span style="color:#F60D16">A</span><span style="color:#F60D16">A</span><span style="color:#DADB1C">G</span><span style="color:#0DEAEB">C</span><span style="color:#00EF00">T</span><span style="color:#00EF00">T</span><span style="color:#F60D16">A</span><span style="color:#0DEAEB">C</span><span class="gap">--</span><span style="color:#DADB1C">G</span><span style="color:#00EF00">T</span><span style="color:#F60D16">A</span><span style="color:#0DEAEB">C</span><span style="color:#DADB1C">G</span><span style="color:#00EF00">T</span><span style="color:#F60D16">A</span>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="swatch-color" style="background:#F60D16"></div><span class="swatch-label">A #F60D16</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0DEAEB"></div><span class="swatch-label">C #0DEAEB</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#DADB1C"></div><span class="swatch-label">G #DADB1C</span></div>
+      <div class="swatch"><div class="swatch-color" style="background:#00EF00"></div><span class="swatch-label">T/U #00EF00</span></div>
+    </div>
+  </div>
+
+</body>
+</html>
