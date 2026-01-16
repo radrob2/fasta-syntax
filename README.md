@@ -1,4 +1,4 @@
-# FASTA Syntax Highlighting for VS Code
+# FASTA Sequence Highlighter for VS Code
 
 Syntax highlighting for FASTA sequence files with per-nucleotide coloring.
 
@@ -57,15 +57,7 @@ Add to your `.vscode/settings.json` or user settings:
 
 ### Bold nucleotides
 
-Add `"fontStyle": "bold"` to make sequences easier to read:
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FF5555", "fontStyle": "bold" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#55CCCC", "fontStyle": "bold" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFCC33", "fontStyle": "bold" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#55DD55", "fontStyle": "bold" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#55DD55", "fontStyle": "bold" } }
-```
+Add `"fontStyle": "bold"` to make sequences easier to read.
 
 ### Invisible gaps
 
@@ -86,85 +78,30 @@ For light themes, adjust header colors:
 
 ## Alternative Palettes
 
-### Clustal
-Traditional Clustal-style colors - red A, blue C, orange G, green T/U.
+### Classic
+Red A, blue C, yellow G, green T.
 
 ```json
 { "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FF4444" } },
 { "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#4488FF" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFAA00" } },
+{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFDD44" } },
 { "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#44DD44" } },
 { "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#44DD44" } }
 ```
 
-### NCBI
-NCBI MSA Viewer style - red A, yellow C, blue G, green T/U.
+### Vivid
+Polychrome-optimized for max distinguishability (min distance 243). Magenta A, cyan C, orange G, green T.
 
 ```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FF4444" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#FFDD44" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#4488FF" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#44DD44" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#44DD44" } }
-```
-
-### DRuMS
-DRuMS mnemonic colors - azure A, carmine C, green G, yellow T/U.
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#44AAFF" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#FF4466" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#44DD44" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#FFDD44" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#FFDD44" } }
-```
-
-### Colorblind-Friendly
-Optimized for deuteranopia/protanopia using distinct hues.
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#648FFF" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#DC267F" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFB000" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#FE6100" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#FE6100" } }
-```
-
-### Polychrome (Default)
-Maximally distinguishable colors generated with R Polychrome package (single green seed, lightness 50-85, min distance 243).
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FE8A0D" } },
+{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FB16FE" } },
 { "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#00D2FB" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FB16FE" } },
+{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FE8A0D" } },
 { "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#22F50D" } },
 { "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#22F50D" } }
 ```
 
-### Pure RGB
-Unmodified pure primary/secondary colors.
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FF0000" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#0000FF" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFFF00" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#00FF00" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#00FF00" } }
-```
-
-### Material
-Material Design inspired - magenta A, blue C, amber G, teal T/U.
-
-```json
-{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#D81B60" } },
-{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#1E88E5" } },
-{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFC107" } },
-{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#004D40" } },
-{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#004D40" } }
-```
-
 ### Muted
-Soft colors for long sessions.
+Soft colors for extended viewing.
 
 ```json
 { "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#D47070" } },
@@ -174,22 +111,46 @@ Soft colors for long sessions.
 { "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#70A870" } }
 ```
 
+### Primary
+Pure red, blue, yellow, green.
+
+```json
+{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#FF0000" } },
+{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#0000FF" } },
+{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFFF00" } },
+{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#00FF00" } },
+{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#00FF00" } }
+```
+
+### Accessible
+Colorblind-friendly (no green - uses orange for T).
+
+```json
+{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#DC267F" } },
+{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#648FFF" } },
+{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#FFB000" } },
+{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#FE6100" } },
+{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#FE6100" } }
+```
+
+### Balanced
+Polychrome L50-85. Red A, cyan C, yellow G, green T.
+
+```json
+{ "scope": "nucleotide.adenine.fasta", "settings": { "foreground": "#F60D16" } },
+{ "scope": "nucleotide.cytosine.fasta", "settings": { "foreground": "#0DEAEB" } },
+{ "scope": "nucleotide.guanine.fasta", "settings": { "foreground": "#DADB1C" } },
+{ "scope": "nucleotide.thymine.fasta", "settings": { "foreground": "#00EF00" } },
+{ "scope": "nucleotide.uracil.fasta", "settings": { "foreground": "#00EF00" } }
+```
+
 ## Installation
 
-### From VSIX file
-
-1. Download `fasta-syntax-0.2.0.vsix`
-2. In VS Code: Extensions sidebar > `...` menu > `Install from VSIX...`
-3. Select the downloaded file
-
-### From source
-
-1. Copy the extension folder to `~/.vscode/extensions/`
-2. Reload VS Code
+Search "FASTA Sequence Highlighter" in VS Code Extensions, or install from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=roberthadfield.fasta-syntax).
 
 ## Authors
 
-- Robert Hadfield (https://github.com/radrob)
+- Robert Hadfield (https://github.com/radrob2)
 - Claude (Anthropic AI) - pair programming
 
 ## License
